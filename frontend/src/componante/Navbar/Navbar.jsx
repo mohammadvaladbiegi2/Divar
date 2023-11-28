@@ -13,22 +13,24 @@ export default function Navbar() {
                      <img className="w-full" src={logo} alt="" />
                   </figure>
                   <div className="w-[1.5px] h-6 mx-2 bg-[rgba(0,0,0,.12)]"></div>
-                  <div className="flex-none flex gap-2 h-10 rounded px-4 hover:bg-[#0000000A] transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[rgba(0,0,0,.56)] hover:text-black cursor-pointer">
+                  <div className="flex-none flex gap-2 h-10 rounded px-3 hover:bg-[#0000000A] transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[rgba(0,0,0,.56)] hover:text-black cursor-pointer">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
                      </svg>
                      <span>تهران</span>
                   </div>
-                  <select className="outline-none flex-none flex gap-2 h-10 rounded px-4 ms-4 hover:bg-[#0000000A] transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[rgba(0,0,0,.56)] hover:text-black cursor-pointer">
-                     <option value="دسته‌ها">دسته‌ها</option>
-                     <option value="دسته‌ها">1</option>
-                     <option value="دسته‌ها">2</option>
-                     <option value="دسته‌ها">3</option>
-                     {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[14px] h-[14px]">
+                  <div className="flex-none flex h-10 rounded px-2 ms-4 hover:bg-[#0000000A] transition-all duration-300 items-center text-[rgba(0,0,0,.56)] hover:text-black">
+                     <select className="outline-none rounded px-2 IRANSansWeb_Medium text-sm cursor-pointer bg-transparent">
+                        <option value="دسته‌ها">دسته‌ها</option>
+                        <option value="دسته‌ها">1</option>
+                        <option value="دسته‌ها">2</option>
+                        <option value="دسته‌ها">3</option>
+                        {/* <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-[14px] h-[14px]">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                      </svg> */}
-                  </select>
+                     </select>
+                  </div>
                   <div className="flex gap-2 min-[1160px]:w-[480px] max-[1160px]:w-full h-10 ms-3 bg-[#F5F5F5] rounded px-4 transition-all duration-300 items-center IRANSansWeb text-sm text-[rgba(0,0,0,.87)] hover:text-black">
                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 text-[#ADADAD] hover:text-black transition-all duration-300">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -59,37 +61,82 @@ export default function Navbar() {
       </header>
       <section className="pt-16 flex justify-center mx-auto" dir="rtl">
          <div className="flex max-w-[1440px]"> {/* max-w */}
-            <div className="fixed top-16 w-[280px] h-screen overflow-y-auto hiddenScrollbar pt-8 px-4 bg-blue-300">
-               Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis neque repudiandae, deserunt nostrum dolores officiis culpa at vitae perspiciatis fugit? Cupiditate, nesciunt placeat. Obcaecati atque doloremque reprehenderit similique fuga molestias.
-               Recusandae voluptate sequi dolore repudiandae necessitatibus error. Molestias magni repellat nemo, cum necessitatibus distinctio harum illum id aperiam repudiandae consectetur at sunt quo, aliquam recusandae tempora, voluptatem dolorem atque libero!
-               Accusantium iure eum labore itaque eligendi, illo incidunt placeat. Illo, pariatur ullam, aut nesciunt exercitationem error soluta tenetur amet quam ratione quos odit explicabo, repudiandae impedit eligendi quas vel ut!
-               Non, nihil. Nobis hic natus repellat tenetur, repudiandae mollitia dolorem quidem consequatur facilis quo doloremque ullam odio perspiciatis itaque dolorum ipsa asperiores et dicta accusantium sed fuga blanditiis. Fuga, molestias?
-               Ad perferendis vel doloremque ullam quos earum consectetur fugit, nemo voluptas consequuntur nam temporibus necessitatibus enim eius, voluptate similique! Quibusdam adipisci quasi voluptatum. Est, vitae quasi alias corrupti facere aliquam?
-               Voluptate iste asperiores cumque harum modi veniam magni repellat optio itaque corrupti, incidunt pariatur explicabo exercitationem maxime ex quidem nobis illo, officia vero impedit alias aliquid rem inventore vel? Qui.
-               Commodi debitis nemo dolore nobis molestias magni assumenda sequi, esse minima qui saepe doloribus quaerat odit nulla, obcaecati architecto repellat iste repudiandae consectetur, mollitia voluptatem harum aspernatur et a. Perspiciatis?
-               Facilis suscipit maxime porro, tenetur nisi ipsum molestiae omnis dicta vero temporibus nemo ut soluta eius error quasi quidem dolorem! Recusandae aliquid quos culpa pariatur mollitia ea ut, ducimus delectus!
-               Possimus eligendi animi cum natus, numquam dolorem fugiat cumque suscipit facilis distinctio. Odit est nisi beatae modi eius, quae id rem, ad recusandae vero tempora consectetur assumenda impedit nam eos?
-               Tempore molestias qui sed. Quisquam, exercitationem nihil. Molestias in ipsa obcaecati ipsum recusandae, repellendus exercitationem cumque aut ex voluptate assumenda quos, delectus, sit aliquam natus vero incidunt quo aperiam perspiciatis.
-               Similique incidunt voluptatem illum laborum officia aliquam quasi ullam dolorem excepturi veritatis modi dolore quibusdam, doloribus, enim, consectetur iure fuga rem deleniti at. Quaerat quos magni architecto rem doloribus perspiciatis!
-               Neque illo voluptas minima doloremque excepturi dicta exercitationem quibusdam, est voluptates expedita illum officia itaque quaerat laudantium perferendis provident maxime aliquid culpa quia assumenda cupiditate odio? Nesciunt vel deserunt obcaecati!
-               Laudantium hic veritatis dignissimos et neque suscipit, quas omnis officiis cupiditate aliquam magni excepturi in. Voluptas, suscipit inventore quos ea quibusdam velit veritatis quo aut reiciendis tempore ex explicabo beatae.
-               Ab labore possimus accusantium obcaecati tempore, eveniet rem aperiam, aliquam quis molestiae recusandae cumque beatae minima qui voluptas? Repellendus beatae error quaerat commodi delectus maxime amet dicta corporis, temporibus culpa!
-               Eligendi architecto quis provident autem nostrum rerum sunt impedit. Nobis quidem error maxime animi repellendus quo reiciendis ea, nesciunt magnam officiis sit voluptatem temporibus recusandae aperiam architecto fugit cupiditate impedit!
-               Dolore velit impedit quasi non accusantium sapiente earum deserunt sed maiores praesentium voluptates sint perspiciatis enim, nam, minus totam laudantium! Fugiat maiores possimus molestias eum, at saepe omnis aliquam labore?
-               Beatae excepturi consequatur debitis quas officiis? Et dolore, quam pariatur architecto, impedit voluptates mollitia praesentium, magnam sed atque deleniti vel exercitationem ullam iusto molestias. Architecto iure dolores reiciendis aliquid eveniet?
-               Quos quisquam, odio, saepe aliquam et qui sapiente accusantium quo commodi corrupti consectetur laudantium laborum officia temporibus iste sit doloremque voluptatem. Accusamus rerum praesentium vel quasi ipsa, quos dolor corrupti?
-               Dolorum incidunt consectetur aliquam veritatis nihil laborum eaque quis. Totam modi veniam quaerat animi harum quisquam, quidem beatae voluptas quod quam perspiciatis recusandae possimus placeat reiciendis voluptates. Quae, accusantium totam.
-               Magni, itaque eligendi incidunt dolores earum, fugiat consequatur, modi eum vero possimus placeat nostrum! Doloribus soluta quae ipsam sed quia aliquam ad, consectetur qui mollitia nam culpa sequi perferendis accusantium.
-               Commodi nisi nesciunt, blanditiis deserunt tenetur exercitationem atque repellat ipsum! Inventore deleniti ducimus amet quis provident enim possimus perspiciatis libero deserunt eaque, voluptas optio, rem vel beatae maxime magni aut.
-               Blanditiis cumque eum possimus, quisquam ducimus repellat recusandae. Voluptate in ipsa dolorum sequi fugiat ratione architecto eos consequatur repellendus adipisci soluta consectetur cupiditate laudantium neque, veritatis quidem. Molestiae, pariatur fugit!
-               Voluptatibus quis repellendus eligendi consequuntur debitis enim sit aliquid, doloribus, reiciendis nulla sapiente. Aliquid explicabo molestias reprehenderit, vitae sit maiores sunt ab facere. Aliquam iure eaque est ipsam totam veritatis!
-               Porro dignissimos numquam quaerat provident eaque dolorum? Repellendus vitae, natus pariatur ipsum ab quam delectus doloremque quia minima, repellat, assumenda aut! Enim expedita vel nobis eos magni repudiandae sint laudantium!
-               Iusto ex eum illum quos delectus inventore, cum corporis dignissimos dolorem consequatur, dolor, qui totam? Dolore quae quia dolorem in explicabo voluptas nobis odit, illum officiis itaque aliquid dolor totam!
-               Enim veritatis laboriosam dolore reprehenderit quae debitis ipsa pariatur, ipsam exercitationem facere omnis cum, illum eligendi laudantium animi eius ducimus sint tempora? Beatae corrupti dolore, ea enim necessitatibus quos suscipit.
-               Possimus distinctio voluptas accusamus. Corporis consequuntur error autem, sunt minima cum et recusandae ullam nisi laborum dolor reiciendis facilis consectetur aperiam quia ipsam! Omnis tempore iste quo animi praesentium vitae!
-               Molestias vel id nulla pariatur omnis optio nemo inventore deleniti, exercitationem eum suscipit animi est mollitia, commodi eius? Maxime deserunt saepe cupiditate magni corrupti sit, tenetur quibusdam ut. Debitis, ullam?
-               Debitis tempora modi vel accusantium fugit quos mollitia, dolore fuga deleniti doloremque voluptatibus? Dolorem expedita fuga voluptatibus adipisci incidunt rem ipsa facilis dolorum modi enim id, omnis similique nisi et.
-               Temporibus, ex. Id dolorem architecto, maiores dolorum corrupti tempora quos, quo possimus eveniet odit, eum facilis! Iste ab, excepturi quae rem, expedita maiores, dolorum et provident voluptates at tenetur. Error.
+            <div className="fixed top-16 w-[280px] h-screen overflow-y-auto hiddenScrollbar pt-8 px-4">
+               <div>
+                  <div>
+                     <div className="text-xs IRANSansWeb py-2 leading-[2]">دسته‌ها</div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+                        </svg>
+                        <span className="leading-6">املاک</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0">
+                           </g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M3 8L5.72187 10.2682C5.90158 10.418 6.12811 10.5 6.36205 10.5H17.6379C17.8719 10.5 18.0984 10.418 18.2781 10.2682L21 8M6.5 14H6.51M17.5 14H17.51M8.16065 4.5H15.8394C16.5571 4.5 17.2198 4.88457 17.5758 5.50772L20.473 10.5777C20.8183 11.1821 21 11.8661 21 12.5623V18.5C21 19.0523 20.5523 19.5 20 19.5H19C18.4477 19.5 18 19.0523 18 18.5V17.5H6V18.5C6 19.0523 5.55228 19.5 5 19.5H4C3.44772 19.5 3 19.0523 3 18.5V12.5623C3 11.8661 3.18166 11.1821 3.52703 10.5777L6.42416 5.50772C6.78024 4.88457 7.44293 4.5 8.16065 4.5ZM7 14C7 14.2761 6.77614 14.5 6.5 14.5C6.22386 14.5 6 14.2761 6 14C6 13.7239 6.22386 13.5 6.5 13.5C6.77614 13.5 7 13.7239 7 14ZM18 14C18 14.2761 17.7761 14.5 17.5 14.5C17.2239 14.5 17 14.2761 17 14C17 13.7239 17.2239 13.5 17.5 13.5C17.7761 13.5 18 13.7239 18 14Z" stroke="currentColor" stroke-width="1.9200000000000004" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                        </svg>
+                        <span className="leading-6">وسایل نقلیه</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                        </svg>
+                        <span className="leading-6">کالای دیجیتال</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M14.6459 3H9.35404C8.53624 3 7.80082 3.4979 7.49709 4.25721L5.09707 10.2572C4.57157 11.5709 5.53909 13 6.95402 13H17.0459C18.4608 13 19.4283 11.571 18.9028 10.2572L16.5029 4.25723C16.1991 3.49791 15.4637 3 14.6459 3Z" stroke="currentColor" stroke-width="1.9200000000000004" stroke-linecap="round"></path> <path d="M8 21H16" stroke="currentColor" stroke-width="1.9200000000000004" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 21V13.5" stroke="currentColor" stroke-width="1.9200000000000004" stroke-linecap="round" stroke-linejoin="round"></path> </g>
+                        </svg>
+                        <span className="leading-6">خانه و آشپزخانه</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg fill="currentColor" width="20px" height="20px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" d="M14,3 L14,6 L12,6 L12,3 L10,3 L10,7 L8,7 L8,3 L6,3 L6,9 L18,9 L18,3 L14,3 Z M4,9 L4,1 L20,1 L20,9 L20.0000198,10.0000198 C20,11.5000033 20,11.5000033 19.9999835,12.9942495 C20.0087372,14.516482 19.1594249,14.9983131 16.7913579,15.7079171 C15.4033862,16.1238306 15,16.3523073 15,16.5 C15,17.2676064 15.0702864,17.7830399 15.2201425,18.3824644 C15.1911605,18.2665365 15.361966,18.9269843 15.3996774,19.1029709 C15.4660007,19.4124795 15.5,19.6941881 15.5,20 C15.5,21.6608656 13.9376765,23 12,23 C10.0623234,23 8.5,21.6608658 8.5,20 C8.5,19.6941881 8.53399931,19.4124795 8.60032259,19.1029709 C8.638034,18.9269843 8.80883947,18.2665365 8.7798575,18.3824644 C8.92971361,17.7830399 9,17.2676064 9,16.5 C9,16.3513074 8.5977122,16.1233443 7.21265211,15.7078263 C4.8477122,14.9983443 4,14.5179741 4,13 L4,9 Z M6,11 L6,13 C6,13.1486926 6.4022878,13.3766557 7.78734789,13.7921737 C10.1522878,14.5016557 11,14.9820259 11,16.5 C11,17.4407269 10.9077864,18.1169601 10.7201425,18.8675356 C10.7380355,18.7959635 10.5833202,19.3941962 10.5559274,19.5220291 C10.5173987,19.7018297 10.5,19.8459905 10.5,20 C10.5,20.4819917 11.1043431,21 12,21 C12.8956568,21 13.5,20.4819915 13.5,20 C13.5,19.8459905 13.4826013,19.7018297 13.4440726,19.5220291 C13.4166798,19.3941962 13.2619645,18.7959635 13.2798575,18.8675356 C13.0922136,18.1169601 13,17.4407269 13,16.5 C13,14.9826981 13.8492981,14.5016584 16.2129647,13.7933724 L16.2172679,13.7920829 C17.6004668,13.3775999 18.0008487,13.1504556 18,13 C18,11.9351632 18,11.626243 18.0000071,11 L6,11 Z"></path> </g></svg>
+                        <span className="leading-6">خدمات</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracurrentColorerCarrier" stroke-linecurrentcap="round" stroke-linejoin="round"></g><g id="SVGRepo_icurrentColoronCarrier"> <path d="M17 6.5L16.6961 5.13228C16.3624 3.63065 16.1955 2.87983 15.6471 2.43992C15.0987 2 14.3296 2 12.7913 2H11.2087C9.67043 2 8.9013 2 8.35289 2.43992C7.80448 2.87983 7.63763 3.63065 7.30394 5.13228L7 6.5" stroke="currentColor" stroke-width="1.6799999999999997"></path> <path d="M17 17.5L16.6961 18.8677C16.3624 20.3694 16.1955 21.1202 15.6471 21.5601C15.0987 22 14.3296 22 12.7913 22H11.2087C9.67043 22 8.9013 22 8.35289 21.5601C7.80448 21.1202 7.63763 20.3694 7.30394 18.8677L7 17.5" stroke="currentColor" stroke-width="1.6799999999999997"></path> <path d="M19.5 12C19.5 16.1421 16.1421 19.5 12 19.5C7.85786 19.5 4.5 16.1421 4.5 12C4.5 7.85786 7.85786 4.5 12 4.5C16.1421 4.5 19.5 7.85786 19.5 12Z" stroke="currentColor" stroke-width="1.6799999999999997"></path> <path d="M12 8.92283V11.9998L14 13.9228" stroke="currentColor" stroke-width="1.6799999999999997" stroke-linecurrentcap="round" stroke-linejoin="round"></path> </g></svg>
+                        <span className="leading-6">وسایل شخصی</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25 1.875c0 .369.128.713.349 1.003.215.283.401.604.401.959v0a.64.64 0 01-.657.643 48.39 48.39 0 01-4.163-.3c.186 1.613.293 3.25.315 4.907a.656.656 0 01-.658.663v0c-.355 0-.676-.186-.959-.401a1.647 1.647 0 00-1.003-.349c-1.036 0-1.875 1.007-1.875 2.25s.84 2.25 1.875 2.25c.369 0 .713-.128 1.003-.349.283-.215.604-.401.959-.401v0c.31 0 .555.26.532.57a48.039 48.039 0 01-.642 5.056c1.518.19 3.058.309 4.616.354a.64.64 0 00.657-.643v0c0-.355-.186-.676-.401-.959a1.647 1.647 0 01-.349-1.003c0-1.035 1.008-1.875 2.25-1.875 1.243 0 2.25.84 2.25 1.875 0 .369-.128.713-.349 1.003-.215.283-.4.604-.4.959v0c0 .333.277.599.61.58a48.1 48.1 0 005.427-.63 48.05 48.05 0 00.582-4.717.532.532 0 00-.533-.57v0c-.355 0-.676.186-.959.401-.29.221-.634.349-1.003.349-1.035 0-1.875-1.007-1.875-2.25s.84-2.25 1.875-2.25c.37 0 .713.128 1.003.349.283.215.604.401.96.401v0a.656.656 0 00.658-.663 48.422 48.422 0 00-.37-5.36c-1.886.342-3.81.574-5.766.689a.578.578 0 01-.61-.58v0z" />
+                        </svg>
+                        <span className="leading-6">سرگرمی و فراغت</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" d="M3.5 8a5.5 5.5 0 118.596 4.547 9.005 9.005 0 015.9 8.18.75.75 0 01-1.5.045 7.5 7.5 0 00-14.993 0 .75.75 0 01-1.499-.044 9.005 9.005 0 015.9-8.181A5.494 5.494 0 013.5 8zM9 4a4 4 0 100 8 4 4 0 000-8z"></path><path d="M17.29 8c-.148 0-.292.01-.434.03a.75.75 0 11-.212-1.484 4.53 4.53 0 013.38 8.097 6.69 6.69 0 013.956 6.107.75.75 0 01-1.5 0 5.193 5.193 0 00-3.696-4.972l-.534-.16v-1.676l.41-.209A3.03 3.03 0 0017.29 8z"></path></g>
+                        </svg>
+                        <span className="leading-6">اجتماعی</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 006-6v-1.5m-6 7.5a6 6 0 01-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 01-3-3V4.5a3 3 0 116 0v8.25a3 3 0 01-3 3z" />
+                        </svg>
+                        <span className="leading-6">تجهیزات و صنعتی</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                           <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
+                        </svg>
+                        <span className="leading-6">استخدام و کاریابی</span>
+                     </div>
+                     <div className="flex gap-2 transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[#0000008f] hover:text-black cursor-pointer py-2">
+                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                           <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path fill-rule="evenodd" d="M12 2.5a5.5 5.5 0 00-3.096 10.047 9.005 9.005 0 00-5.9 8.18.75.75 0 001.5.045 7.5 7.5 0 0114.993 0 .75.75 0 101.499-.044 9.005 9.005 0 00-5.9-8.181A5.5 5.5 0 0012 2.5zM8 8a4 4 0 118 0 4 4 0 01-8 0z"></path></g>
+                        </svg>
+                        <div className="leading-6 flex gap-1">
+                           <span>رزومۀ کارجویان</span>
+                           <span className="text-[#a62626]">(جدید)</span>
+                        </div>
+                     </div>
+                  </div>
+                  <div className="mt-4">
+                     <hr />
+                  </div>
+               </div>
+               <div></div>
             </div>
             <div className="flex flex-col items-end ps-[300px] pe-4 w-full h-screen mt-8">
                <div className="text-xs IRANSansWeb text-[rgba(0,0,0,.56)] leading-[1.5rem] pb-2">
