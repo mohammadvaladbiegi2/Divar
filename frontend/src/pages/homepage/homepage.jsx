@@ -144,7 +144,7 @@ export default function homepage() {
                   onChange={(event) => setstutus(event.target.value)}
                   className="outline-none rounded px-2 IRANSansWeb_Medium text-sm cursor-pointer bg-transparent"
                 >
-                  <option value="all">دسته‌ها همه</option>
+                  <option value="all">همه دسته ها</option>
                   <option value="home">املاک</option>
                   <option value="vehicle">وسایل نقلیه</option>
                   <option value="Digital">کالای دیجیتال</option>
