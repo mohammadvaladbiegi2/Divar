@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../../../public/images/logo.svg"
 import item1 from "../../../public/images/item1.webp"
+import item2 from "../../../public/images/item2.webp"
+import item3 from "../../../public/images/item3.webp"
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -146,13 +148,13 @@ export default function Navbar() {
                <div className="flex flex-wrap justify-end gap-4 pt-2">
                   {/* a item */}
                   <div className="h-[168px] cursor-pointer">
-                     <div className="flex max-w-[364px] rounded h-full p-4" style={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08), inset 0 0 0 1px #fff' }}>
-                        <div>
-                           <div className="IRANSansWeb_Medium text-base leading-7 mb-2">چرخ گوشت نوتمیز یکبارامتحان شده قدرت</div>
+                     <div className="flex w-[364px] rounded h-full p-4" style={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08), inset 0 0 0 1px #fff' }}>
+                        <div className="w-[172px]">
+                           <div className="IRANSansWeb_Medium text-base leading-7 mb-2 h-14 overflow-hidden">اتو مو ویو، حالت دهنده ی موی باراباس نانو</div>
                            <div className="IRANSansWeb flex flex-col text-[#0000008f]">
-                              <span className="text-sm leading-6">در حد نو</span>
-                              <span className="text-sm leading-6">۱,۵۰۰,۰۰۰ تومان</span>
-                              <span className="text-xs leading-6">لحظاتی پیش در لویزان</span>
+                              <span className="text-sm leading-6 h-6 truncate">در حد نو</span>
+                              <span className="text-sm leading-6 h-6 truncate">۱,۵۰۰,۰۰۰ تومان</span>
+                              <span className="text-xs leading-6 h-6 truncate">لحظاتی پیش در لویزان</span>
                            </div>
                         </div>
                         <div className="flex items-end pe-1 text-[rgba(0,0,0,.56)]">
@@ -160,20 +162,20 @@ export default function Navbar() {
                               <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
                            </svg>
                         </div>
-                        <div className="flex-none w-[136px]">
-                           <img src={item1} alt="" />
+                        <div className="flex-none w-[136px] h-[136px]">
+                           <img className="w-full h-full" src={item2} alt="" />
                         </div>
                      </div>
-                  </div>
+                  </div>                                                    
                   {/* a item */}
                   <div className="h-[168px] cursor-pointer">
-                     <div className="flex max-w-[364px] rounded h-full p-4" style={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08), inset 0 0 0 1px #fff' }}>
-                        <div>
-                           <div className="IRANSansWeb_Medium text-base leading-7 mb-2">چرخ گوشت نوتمیز یکبارامتحان شده قدرت</div>
+                     <div className="flex w-[364px] rounded h-full p-4" style={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08), inset 0 0 0 1px #fff' }}>
+                        <div className="w-[172px]">
+                           <div className="IRANSansWeb_Medium text-base leading-7 mb-2 h-14 overflow-hidden">اتو مو ویو، حالت دهنده ی موی باراباس نانو</div>
                            <div className="IRANSansWeb flex flex-col text-[#0000008f]">
-                              <span className="text-sm leading-6">در حد نو</span>
-                              <span className="text-sm leading-6">۱,۵۰۰,۰۰۰ تومان</span>
-                              <span className="text-xs leading-6">لحظاتی پیش در لویزان</span>
+                              <span className="text-sm leading-6 h-6 truncate">در حد نو</span>
+                              <span className="text-sm leading-6 h-6 truncate">۱,۵۰۰,۰۰۰ تومان</span>
+                              <span className="text-xs leading-6 h-6 truncate">لحظاتی پیش در لویزان</span>
                            </div>
                         </div>
                         <div className="flex items-end pe-1 text-[rgba(0,0,0,.56)]">
@@ -181,53 +183,11 @@ export default function Navbar() {
                               <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
                            </svg>
                         </div>
-                        <div className="flex-none w-[136px]">
-                           <img src={item1} alt="" />
+                        <div className="flex-none w-[136px] h-[136px]">
+                           <img className="w-full h-full" src={item3} alt="" />
                         </div>
                      </div>
-                  </div>
-                  {/* a item */}
-                  <div className="h-[168px] cursor-pointer">
-                     <div className="flex max-w-[364px] rounded h-full p-4" style={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08), inset 0 0 0 1px #fff' }}>
-                        <div>
-                           <div className="IRANSansWeb_Medium text-base leading-7 mb-2">چرخ گوشت نوتمیز یکبارامتحان شده قدرت</div>
-                           <div className="IRANSansWeb flex flex-col text-[#0000008f]">
-                              <span className="text-sm leading-6">در حد نو</span>
-                              <span className="text-sm leading-6">۱,۵۰۰,۰۰۰ تومان</span>
-                              <span className="text-xs leading-6">لحظاتی پیش در لویزان</span>
-                           </div>
-                        </div>
-                        <div className="flex items-end pe-1 text-[rgba(0,0,0,.56)]">
-                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
-                           </svg>
-                        </div>
-                        <div className="flex-none w-[136px]">
-                           <img src={item1} alt="" />
-                        </div>
-                     </div>
-                  </div>
-                  {/* a item */}
-                  <div className="h-[168px] cursor-pointer">
-                     <div className="flex max-w-[364px] rounded h-full p-4" style={{ boxShadow: 'inset 0 0 0 1px rgba(0,0,0,.08), inset 0 0 0 1px #fff' }}>
-                        <div>
-                           <div className="IRANSansWeb_Medium text-base leading-7 mb-2">چرخ گوشت نوتمیز یکبارامتحان شده قدرت</div>
-                           <div className="IRANSansWeb flex flex-col text-[#0000008f]">
-                              <span className="text-sm leading-6">در حد نو</span>
-                              <span className="text-sm leading-6">۱,۵۰۰,۰۰۰ تومان</span>
-                              <span className="text-xs leading-6">لحظاتی پیش در لویزان</span>
-                           </div>
-                        </div>
-                        <div className="flex items-end pe-1 text-[rgba(0,0,0,.56)]">
-                           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25c4.97 0 9-3.694 9-8.25s-4.03-8.25-9-8.25S3 7.444 3 12c0 2.104.859 4.023 2.273 5.48.432.447.74 1.04.586 1.641a4.483 4.483 0 01-.923 1.785A5.969 5.969 0 006 21c1.282 0 2.47-.402 3.445-1.087.81.22 1.668.337 2.555.337z" />
-                           </svg>
-                        </div>
-                        <div className="flex-none w-[136px]">
-                           <img src={item1} alt="" />
-                        </div>
-                     </div>
-                  </div>
+                  </div>                                                    
                </div>
             </div>
          </div>
