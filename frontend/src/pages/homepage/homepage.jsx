@@ -6,7 +6,6 @@ import logo from "../../../public/images/logo.svg";
 export default function homepage() {
   const [allproduct, setallproduct] = useState([]);
   const [showproduct, setshowproduct] = useState([]);
-  const [Orderproduct, setOrderproduct] = useState([]);
   const [SearchValue, setSearchValue] = useState("");
   const [stuts, setstutus] = useState("all");
 
@@ -15,94 +14,93 @@ export default function homepage() {
       .then((res) => res.json())
       .then((data) => {
         setallproduct(data);
-        setOrderproduct(data);
+
+        setshowproduct(data);
       });
   }, []);
 
   useEffect(() => {
     switch (stuts) {
       case "all": {
-        setOrderproduct(allproduct);
+        setshowproduct(allproduct);
         break;
       }
       case "home": {
         const homecategory = allproduct.filter(
           (product) => product.category === "home"
         );
-        setOrderproduct(homecategory);
+        setshowproduct(homecategory);
         break;
       }
       case "vehicle": {
         const vehiclecategory = allproduct.filter(
           (product) => product.category === "vehicle"
         );
-        setOrderproduct(vehiclecategory);
+        setshowproduct(vehiclecategory);
         break;
       }
       case "Digital": {
         const Digitalcategory = allproduct.filter(
           (product) => product.category === "Digital"
         );
-        setOrderproduct(Digitalcategory);
+        setshowproduct(Digitalcategory);
         break;
       }
       case "kitchen": {
         const kitchencategory = allproduct.filter(
           (product) => product.category === "kitchen"
         );
-        setOrderproduct(kitchencategory);
+        setshowproduct(kitchencategory);
         break;
       }
       case "services": {
         const servicescategory = allproduct.filter(
           (product) => product.category === "services"
         );
-        setOrderproduct(servicescategory);
+        setshowproduct(servicescategory);
         break;
       }
       case "personalitems": {
         const personalitemscategory = allproduct.filter(
           (product) => product.category === "personalitems"
         );
-        setOrderproduct(personalitemscategory);
+        setshowproduct(personalitemscategory);
         break;
       }
       case "entertainment": {
         const entertainmentcategory = allproduct.filter(
           (product) => product.category === "entertainment"
         );
-        setOrderproduct(entertainmentcategory);
+        setshowproduct(entertainmentcategory);
         break;
       }
       case "social": {
         const socialcategory = allproduct.filter(
           (product) => product.category === "social"
         );
-        setOrderproduct(socialcategory);
+        setshowproduct(socialcategory);
         break;
       }
       case "industrialequipment": {
         const industrialequipmentcategory = allproduct.filter(
           (product) => product.category === "industrialequipment"
         );
-        setOrderproduct(industrialequipmentcategory);
+        setshowproduct(industrialequipmentcategory);
         break;
       }
 
-      default: {
-        setOrderproduct(allproduct);
-      }
+      default:
+        setshowproduct(allproduct);
     }
     setSearchValue("");
   }, [stuts]);
 
-  const searchhandler = (event) => {
-    setSearchValue(event.target.value);
+  useEffect(() => {
     const filterproduct = allproduct.filter((product) =>
       product.title.toLowerCase().includes(SearchValue)
     );
     setshowproduct(filterproduct);
-  };
+  }, [SearchValue]);
 
   return (
     <div>
@@ -176,7 +174,7 @@ export default function homepage() {
                   placeholder="جستجو در همهٔ آگهی‌ها"
                   type="text"
                   value={SearchValue}
-                  onChange={searchhandler}
+                  onChange={(e) => setSearchValue(e.target.value)}
                 />
               </div>
             </div>
@@ -508,20 +506,14 @@ export default function homepage() {
             <div className="flex flex-wrap justify-end gap-4 pt-2">
               {/* a item */}
 
-              {SearchValue.length ? (
-                showproduct.length ? (
-                  showproduct.map((product) => (
-                    <Boxproduct key={product.id} {...product} />
-                  ))
-                ) : (
-                  <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg">
-                    آگهی مورد نظر یافت نشد
-                  </div>
-                )
-              ) : (
-                Orderproduct.map((product) => (
+              {showproduct.length ? (
+                showproduct.map((product) => (
                   <Boxproduct key={product.id} {...product} />
                 ))
+              ) : (
+                <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg">
+                  آگهی مورد نظر یافت نشد
+                </div>
               )}
             </div>
           </div>
