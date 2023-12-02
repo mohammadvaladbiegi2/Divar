@@ -23,7 +23,9 @@ export default function Boxproduct({
           <div className="IRANSansWeb flex flex-col text-[#0000008f]">
             <span className="text-sm leading-6 h-6 truncate">{condition}</span>
             <span className="text-sm leading-6 h-6 truncate">
-              {price === "0" || price === "توافقی" ? "" : `${price} تومان`}
+              {price === 0 || price === "توافقی"
+                ? ""
+                : `${price.toLocaleString()} تومان`}
             </span>
             <span className="text-xs leading-6 h-6 truncate">
               در تاریخ {CREATED_AT}
