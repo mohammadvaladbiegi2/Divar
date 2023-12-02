@@ -1,11 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import routs from "./routs";
-
-import Navbar from "./componante/Navbar/Navbar";
-
-
-
 import "./App.css";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   const rout = useRoutes(routs);
@@ -13,12 +9,9 @@ function App() {
 
   return (
     <>
-      {/* <Navbar /> */}
-     
       {rout}
+      <Toaster position="top-right" />
     </>
-  );
-
 
 }
 
