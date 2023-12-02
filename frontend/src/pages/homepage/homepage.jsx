@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./homepage.css";
 import Boxproduct from "../../componante/Boxproduct/Boxproduct";
 import logo from "../../../public/images/logo.svg";
+import { Link } from "react-router-dom";
 
 export default function homepage() {
   const [allproduct, setallproduct] = useState([]);
@@ -21,10 +22,6 @@ export default function homepage() {
 
   useEffect(() => {
     switch (stuts) {
-      case "all": {
-        setshowproduct(allproduct);
-        break;
-      }
       case "home": {
         const homecategory = allproduct.filter(
           (product) => product.category === "home"
@@ -89,8 +86,9 @@ export default function homepage() {
         break;
       }
 
-      default:
-        setshowproduct(allproduct);
+      default: {
+        setshowproduct([...allproduct]);
+      }
     }
     setSearchValue("");
   }, [stuts]);
@@ -140,9 +138,10 @@ export default function homepage() {
               <div className="flex-none flex h-10 rounded px-2 ms-4 hover:bg-[#0000000A] transition-all duration-300 items-center text-[rgba(0,0,0,.56)] hover:text-black">
                 <select
                   onChange={(event) => setstutus(event.target.value)}
+                  defaultValue={stuts}
                   className="outline-none rounded px-2 IRANSansWeb_Medium text-sm cursor-pointer bg-transparent"
                 >
-                  <option value="all">همه دسته ها</option>
+                  <option value="-1">همه دسته ها</option>
                   <option value="home">املاک</option>
                   <option value="vehicle">وسایل نقلیه</option>
                   <option value="Digital">کالای دیجیتال</option>
@@ -216,9 +215,12 @@ export default function homepage() {
               <div className="flex-none flex h-10 rounded px-4 ms-2 hover:bg-[#0000000A] transition-all duration-300 items-center IRANSansWeb_Medium text-xs text-[rgba(0,0,0,.56)] hover:text-black cursor-pointer">
                 پشتیبانی
               </div>
-              <div className="flex-none flex h-10 rounded px-4 ms-4 hover:bg-[#be3737] transition-all duration-300 items-center bg-[#a62626] text-white IRANSansWeb_Medium text-sm cursor-pointer">
+              <Link
+                to="/newproduct"
+                className="flex-none flex h-10 rounded px-4 ms-4 hover:bg-[#be3737] transition-all duration-300 items-center bg-[#a62626] text-white IRANSansWeb_Medium text-sm cursor-pointer"
+              >
                 ثبت آگهی
-              </div>
+              </Link>
             </div>
           </div>
         </div>
