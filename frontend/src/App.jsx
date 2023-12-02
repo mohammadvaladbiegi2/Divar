@@ -6,13 +6,12 @@ import { Toaster } from "react-hot-toast";
 function App() {
   const rout = useRoutes(routs);
 
-
   return (
     <>
       {rout}
       <Toaster position="top-right" />
     </>
-
+  );
 }
 
 export default App;
