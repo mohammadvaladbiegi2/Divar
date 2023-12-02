@@ -1,6 +1,7 @@
 import { useRoutes } from "react-router-dom";
 import routs from "./routs";
 import Navbar from "./componante/Navbar/Navbar";
+import productpage from "./pages/productpage/productpage";
 import "./App.css";
 
 function App() {
@@ -8,7 +9,8 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
+      <productpage />
       {rout}
     </>
   );

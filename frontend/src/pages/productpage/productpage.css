@@ -1,0 +1,7 @@
+.imageBg{
+    background-image: url(../../../public/images/productPage1.jpg);
+    width: 100%;
+    height: 366px;
+    background-size: cover;
+    background-position: center;
+}
