@@ -8,7 +8,8 @@ export default function homepage() {
   const [allproduct, setallproduct] = useState([]);
   const [showproduct, setshowproduct] = useState([]);
   const [SearchValue, setSearchValue] = useState("");
-  const [stuts, setstutus] = useState("all");
+  const [stuts, setstutus] = useState("");
+  const [statusCity, setStatusCity] = useState("");
 
   useEffect(() => {
     fetch("http://localhost:2501/product/all")
@@ -20,6 +21,37 @@ export default function homepage() {
       });
   }, []);
 
+  useEffect(() => {
+    switch (statusCity) {
+      case "sanandaj": {
+        const sanandaj = allproduct.filter(
+          (product) => product.city === "sanandaj"
+        );
+        setshowproduct(sanandaj);
+        break;
+      }
+      case "Kermanshah": {
+        const Kermansha = allproduct.filter(
+          (product) => product.city === "Kermanshah"
+        );
+        setshowproduct(Kermansha);
+        break;
+      }
+      case "tehran": {
+        const tehran = allproduct.filter(
+          (product) => product.city === "tehran"
+        );
+        setshowproduct(tehran);
+        break;
+      }
+
+      default: {
+        setshowproduct([...allproduct]);
+      }
+    }
+    setSearchValue("");
+    setstutus("-1");
+  }, [statusCity]);
   useEffect(() => {
     switch (stuts) {
       case "home": {
@@ -91,6 +123,7 @@ export default function homepage() {
       }
     }
     setSearchValue("");
+    setStatusCity("-1");
   }, [stuts]);
 
   useEffect(() => {
@@ -98,6 +131,8 @@ export default function homepage() {
       product.title.toLowerCase().includes(SearchValue)
     );
     setshowproduct(filterproduct);
+    setStatusCity("-1");
+    setstutus("-1");
   }, [SearchValue]);
 
   return (
@@ -114,7 +149,7 @@ export default function homepage() {
               </figure>
               <div className="w-[1.5px] h-6 mx-2 bg-[rgba(0,0,0,.12)]"></div>
               <div className="flex-none flex gap-2 h-10 rounded px-3 hover:bg-[#0000000A] transition-all duration-300 items-center IRANSansWeb_Medium text-sm text-[rgba(0,0,0,.56)] hover:text-black cursor-pointer">
-                <svg
+                {/* <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -133,7 +168,18 @@ export default function homepage() {
                     d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
                   />
                 </svg>
-                <span>تهران</span>
+                <span>تهران</span> */}
+                <select
+                  id="selectBox"
+                  className="outline-none bg-red"
+                  onChange={(e) => setStatusCity(e.target.value)}
+                  defaultValue={statusCity}
+                >
+                  <option value="-1">شهر ها</option>
+                  <option value="sanandaj">سنندج</option>
+                  <option value="Kermanshah">کرمانشاه</option>
+                  <option value="tehran">تهران</option>
+                </select>
               </div>
               <div className="flex-none flex h-10 rounded px-2 ms-4 hover:bg-[#0000000A] transition-all duration-300 items-center text-[rgba(0,0,0,.56)] hover:text-black">
                 <select
@@ -509,9 +555,11 @@ export default function homepage() {
               {/* a item */}
 
               {showproduct.length ? (
-                showproduct.map((product) => (
-                  <Boxproduct key={product.id} {...product} />
-                ))
+                [...showproduct]
+                  .reverse()
+                  .map((product) => (
+                    <Boxproduct key={product.id} {...product} />
+                  ))
               ) : (
                 <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg">
                   آگهی مورد نظر یافت نشد
