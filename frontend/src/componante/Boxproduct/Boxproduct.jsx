@@ -1,5 +1,6 @@
 import React from "react";
 import "./Boxproduct.css";
+import { Link } from "react-router-dom";
 
 export default function Boxproduct({
   title,
@@ -7,9 +8,10 @@ export default function Boxproduct({
   condition,
   CREATED_AT,
   img,
+  shortname,
 }) {
   return (
-    <div className="h-[168px] cursor-pointer">
+    <Link to={`/product/${shortname}`} className="h-[168px] cursor-pointer">
       <div
         className="flex w-[364px] rounded h-full p-4"
         style={{
@@ -52,6 +54,6 @@ export default function Boxproduct({
           <img className="w-full h-full object-cover" src={img} />
         </div>
       </div>
-    </div>
+    </Link>
   );
 }

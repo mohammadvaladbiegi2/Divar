@@ -5,6 +5,7 @@ import logo from "../../../public/images/logo.svg";
 import { Link } from "react-router-dom";
 
 export default function homepage() {
+  window.scroll(0, 0);
   const [allproduct, setallproduct] = useState([]);
   const [showproduct, setshowproduct] = useState([]);
   const [SearchValue, setSearchValue] = useState("");
