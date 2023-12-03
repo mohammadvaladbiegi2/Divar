@@ -31,7 +31,7 @@ export default function Newproduct() {
       }).then((res) => {
         res.status === 200 && resetForm();
         toast.success("اگهی مورد نظر اظافه شد");
-        setInterval(() => {
+        setTimeout(() => {
           navigate("/");
         }, 2000);
       });
