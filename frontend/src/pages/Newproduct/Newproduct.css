@@ -23,3 +23,7 @@ input {
   outline: none;
   font-family: IRANSansWeb_Medium;
 }
+
+.textAreaScrollBar::-webkit-scrollbar{
+  display: none;
+}
