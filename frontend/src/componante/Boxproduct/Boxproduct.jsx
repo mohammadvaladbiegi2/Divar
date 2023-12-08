@@ -27,7 +27,7 @@ export default function Boxproduct({
             <span className="text-sm leading-6 h-6 truncate">
               {price === 0 || price === "توافقی"
                 ? ""
-                : `${price.toLocaleString()} تومان`}
+                : `${price.toLocaleString("fa-IR")} تومان`}
             </span>
             <span className="text-xs leading-6 h-6 truncate">
               در تاریخ {CREATED_AT}
