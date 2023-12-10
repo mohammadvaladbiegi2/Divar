@@ -50,7 +50,6 @@ app.post("/newproduct", (req, res) => {
   let shortnamecrator = crypto.randomUUID().slice(0, 6);
   let imag = `/images/${body.img.slice(12)}`;
   let addproductquery = `INSERT INTO product VALUES (NULL,"${body.title}", "${body.price}", "${body.description}", "${time}", "${body.phone}", "${body.category}", "${body.city}", "${imag}", "${shortnamecrator}", "${body.function}", "${body.condition}", "${body.meterage}")`;
-
   DivarDB.query(addproductquery, (error, result) => {
     if (error) {
       res.send(null);

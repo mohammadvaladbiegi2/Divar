@@ -6,6 +6,12 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-hot-toast";
 
 export default function Newproduct() {
+  const [file, setFile] = useState("");
+
+  const changehandel = (e) => {
+    setFile(URL.createObjectURL(e.target.files[0]));
+  };
+
   let navigate = useNavigate();
   const form = useFormik({
     initialValues: {
@@ -150,15 +156,15 @@ export default function Newproduct() {
             <h2 className="mb-3">انتخاب عکس محصول</h2>
             <input
               className="IRANSansWeb"
-              onChange={form.handleChange}
+              onChange={(e) => {
+                form.handleChange();
+                changehandel(e);
+              }}
               value={form.values.img}
               type="file"
               name="img"
             />
-            <img
-              src={`/images/${form.values.img.slice(12)}`}
-              className="w-full object-cover  mt-4"
-            />
+            <img src={file} className="w-full object-cover  mt-4" />
           </div>
           <hr className="text-slate-800 " />
 
