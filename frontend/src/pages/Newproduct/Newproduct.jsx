@@ -151,12 +151,12 @@ export default function Newproduct() {
             <input
               className="IRANSansWeb"
               onChange={form.handleChange}
-              value={form.values.img.URL.createObjectURL(e.target.files[0])}
+              value={form.values.img}
               type="file"
               name="img"
             />
             <img
-              src={`/images/${form.values.img.slice(12)}`}
+              src={form.values.img.URL.createObjectURL(e.target.files[0])}
               className="w-full object-cover  mt-4"
             />
           </div>
