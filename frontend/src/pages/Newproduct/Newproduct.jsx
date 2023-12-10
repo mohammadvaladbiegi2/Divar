@@ -152,9 +152,12 @@ export default function Newproduct() {
               className="IRANSansWeb"
               onChange={form.handleChange}
               value={form.values.img}
-              type="text"
+              type="file"
               name="img"
-              placeholder="لطفا از url استفاده کنید"
+            />
+            <img
+              src={`/images/${form.values.img.slice(12)}`}
+              className="w-full object-cover  mt-4"
             />
           </div>
           <hr className="text-slate-800 " />
