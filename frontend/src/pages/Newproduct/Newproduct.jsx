@@ -155,10 +155,6 @@ export default function Newproduct() {
               type="file"
               name="img"
             />
-            <img
-              src={form.values.img.URL.createObjectURL(e.target.files[0])}
-              className="w-full object-cover  mt-4"
-            />
           </div>
           <hr className="text-slate-800 " />
 
