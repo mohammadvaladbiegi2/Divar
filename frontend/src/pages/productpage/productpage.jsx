@@ -9,7 +9,7 @@ export default function productpage() {
   const [showphoneNumber, setshowphoneNumber] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:2501/product/${shortname}`)
+    `https://divarapi.liara.run/product/${shortname}`
       .then((res) => res.json())
       .then((data) => {
         setmainproduct(data);
