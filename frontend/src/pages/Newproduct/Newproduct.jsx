@@ -151,7 +151,7 @@ export default function Newproduct() {
             <input
               className="IRANSansWeb"
               onChange={form.handleChange}
-              value={form.values.img}
+              value={form.values.img.URL.createObjectURL(e.target.files[0])}
               type="file"
               name="img"
             />
