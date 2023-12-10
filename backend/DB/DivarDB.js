@@ -1,7 +1,7 @@
 const mysql = require("mysql");
 
 const DivarDB = mysql.createConnection({
-  host: "determined_varahamihira",
+  host: "divarapidb",
   user: "root",
   password: "zMOrMLygT2AiyGoL193hTLww",
   database: "	determined_varahamihira",
