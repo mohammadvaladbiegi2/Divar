@@ -152,8 +152,9 @@ export default function Newproduct() {
               className="IRANSansWeb"
               onChange={form.handleChange}
               value={form.values.img}
-              type="file"
+              type="text"
               name="img"
+              placeholder="لطفا از url استفاده کنید"
             />
           </div>
           <hr className="text-slate-800 " />
