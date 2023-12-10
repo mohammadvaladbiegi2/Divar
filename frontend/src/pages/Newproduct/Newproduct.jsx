@@ -22,13 +22,12 @@ export default function Newproduct() {
       category: "",
       desc: "",
       city: "",
-      img: file,
+      img: "",
       function: "",
       condition: "",
       meterage: "",
     },
     onSubmit: (values, { resetForm }) => {
-      console.log(values);
       fetch("https://divarapi.liara.run/newproduct", {
         method: "POST",
         headers: {
@@ -157,15 +156,15 @@ export default function Newproduct() {
             <h2 className="mb-3">انتخاب عکس محصول</h2>
             <input
               className="IRANSansWeb"
-              onChange={(e) => {
-                form.handleChange;
-                changehandel(e);
-              }}
+              onChange={form.handleChange}
               value={form.values.img}
               type="file"
               name="img"
             />
-            <img src={file} className="w-full object-cover  mt-4" />
+            <img
+              src={`/images/${form.values.img.slice(12)}`}
+              className="w-full object-cover  mt-4"
+            />
           </div>
           <hr className="text-slate-800 " />
 
