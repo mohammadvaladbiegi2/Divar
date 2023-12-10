@@ -9,7 +9,7 @@ app.use(cors());
 
 DivarDB.connect((err) => {
   if (err) {
-    console.log("error", err);
+    console.log("error");
   } else {
     console.log("connect to divar DB");
   }
