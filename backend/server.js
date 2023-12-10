@@ -48,8 +48,8 @@ app.post("/newproduct", (req, res) => {
   let body = req.body;
   let time = new Date().toLocaleDateString("fa-IR");
   let shortnamecrator = crypto.randomUUID().slice(0, 6);
-  let imag = `/images/${body.img.URL.createObjectURL(e.target.files[0])}`;
-  let addproductquery = `INSERT INTO product VALUES (NULL,"${body.title}", "${body.price}", "${body.description}", "${time}", "${body.phone}", "${body.category}", "${body.city}", "${imag}", "${shortnamecrator}", "${body.function}", "${body.condition}", "${body.meterage}")`;
+
+  let addproductquery = `INSERT INTO product VALUES (NULL,"${body.title}", "${body.price}", "${body.description}", "${time}", "${body.phone}", "${body.category}", "${body.city}", "${body.img}", "${shortnamecrator}", "${body.function}", "${body.condition}", "${body.meterage}")`;
 
   DivarDB.query(addproductquery, (error, result) => {
     if (error) {
