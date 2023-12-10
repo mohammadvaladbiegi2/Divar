@@ -157,7 +157,7 @@ export default function Newproduct() {
             <input
               className="IRANSansWeb"
               onChange={(e) => {
-                form.handleChange();
+                form.handleChange;
                 changehandel(e);
               }}
               value={form.values.img}
