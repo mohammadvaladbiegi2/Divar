@@ -28,6 +28,7 @@ export default function Newproduct() {
       meterage: "",
     },
     onSubmit: (values, { resetForm }) => {
+      console.log(values);
       fetch("https://divarapi.liara.run/newproduct", {
         method: "POST",
         headers: {
