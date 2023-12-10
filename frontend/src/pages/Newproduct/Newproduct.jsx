@@ -22,7 +22,7 @@ export default function Newproduct() {
       category: "",
       desc: "",
       city: "",
-      img: "",
+      img: file,
       function: "",
       condition: "",
       meterage: "",
