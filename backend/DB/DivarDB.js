@@ -1,10 +1,11 @@
 const mysql = require("mysql");
 
 const DivarDB = mysql.createConnection({
-  host: "localhost",
+  host: "divarapidb",
   user: "root",
-  password: "",
-  database: "divar",
+  password: "zMOrMLygT2AiyGoL193hTLww",
+  database: "	determined_varahamihira",
+  port: 3306,
 });
 
 module.exports = DivarDB;

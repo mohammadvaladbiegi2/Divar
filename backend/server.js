@@ -7,6 +7,14 @@ const app = express();
 app.use(bodyparrser.json());
 app.use(cors());
 
+DivarDB.connect((err) => {
+  if (err) {
+    console.log("error", err);
+  } else {
+    console.log("connect to divar DB");
+  }
+});
+
 app.get("/product/all", (req, res) => {
   let allproductquery = "SELECT * FROM product";
 
