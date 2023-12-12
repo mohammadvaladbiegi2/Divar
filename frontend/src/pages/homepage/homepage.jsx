@@ -138,6 +138,10 @@ export default function homepage() {
     setstutus("-1");
   }, [SearchValue]);
 
+  setTimeout(() => {
+    setload(true);
+  }, 4000);
+
   return (
     <div>
       <header className="fixed w-full bg-white shadow-headerShadow">
@@ -609,29 +613,25 @@ export default function homepage() {
               دوم و کارکرده، استخدام و خدمات
             </div>
             {/* items */}
-            <div
-              className="flex flex-wrap justify-end gap-4 pt-2"
-              onLoad={() => setload(true)}
-            >
-              {/* a item */}
-              {load ? (
-                <div>
-                  {showproduct.length ? (
-                    [...showproduct]
-                      .reverse()
-                      .map((product) => (
-                        <Boxproduct key={product.id} {...product} />
-                      ))
-                  ) : (
-                    <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
-                      آگهی مورد نظر یافت نشد
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Loader />
-              )}
-            </div>
+            {load ? (
+              <div className="flex flex-wrap justify-end gap-4 pt-2">
+                {/* a item */}
+
+                {showproduct.length ? (
+                  [...showproduct]
+                    .reverse()
+                    .map((product) => (
+                      <Boxproduct key={product.id} {...product} />
+                    ))
+                ) : (
+                  <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
+                    آگهی مورد نظر یافت نشد
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Loader />
+            )}
           </div>
         </div>
       </section>
