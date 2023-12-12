@@ -609,23 +609,27 @@ export default function homepage() {
               دوم و کارکرده، استخدام و خدمات
             </div>
             {/* items */}
-            {!load && <Loader />}
             <div
               className="flex flex-wrap justify-end gap-4 pt-2"
               onLoad={() => setload(true)}
             >
               {/* a item */}
-
-              {showproduct.length ? (
-                [...showproduct]
-                  .reverse()
-                  .map((product) => (
-                    <Boxproduct key={product.id} {...product} />
-                  ))
-              ) : (
-                <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
-                  آگهی مورد نظر یافت نشد
+              {load ? (
+                <div>
+                  {showproduct.length ? (
+                    [...showproduct]
+                      .reverse()
+                      .map((product) => (
+                        <Boxproduct key={product.id} {...product} />
+                      ))
+                  ) : (
+                    <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
+                      آگهی مورد نظر یافت نشد
+                    </div>
+                  )}
                 </div>
+              ) : (
+                <Loader />
               )}
             </div>
           </div>
