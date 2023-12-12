@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Boxproduct.css";
 import { Link } from "react-router-dom";
+import Loader from "../loder/Loader";
 
 export default function Boxproduct({
   title,
@@ -10,6 +11,7 @@ export default function Boxproduct({
   img,
   shortname,
 }) {
+  const [loader, setloader] = useState(false);
   return (
     <Link to={`/product/${shortname}`} className="h-[168px] cursor-pointer">
       <div
@@ -51,7 +53,12 @@ export default function Boxproduct({
           </svg>
         </div>
         <div className="flex-none w-[136px] h-[136px]">
-          <img className="w-full h-full object-cover" src={img} />
+          <img
+            className="w-full h-full object-cover"
+            src={img}
+            onLoad={() => setloader(true)}
+          />
+          {!loader && <Loader />}
         </div>
       </div>
     </Link>

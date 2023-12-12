@@ -3,7 +3,6 @@ import "./homepage.css";
 import Boxproduct from "../../componante/Boxproduct/Boxproduct";
 import logo from "../../../public/images/logo.svg";
 import { Link } from "react-router-dom";
-import Loader from "../../componante/loder/Loader";
 
 export default function homepage() {
   window.scroll(0, 0);
@@ -12,7 +11,6 @@ export default function homepage() {
   const [SearchValue, setSearchValue] = useState("");
   const [stuts, setstutus] = useState("");
   const [statusCity, setStatusCity] = useState("");
-  const [loader, setloader] = useState(false);
 
   useEffect(() => {
     fetch("https://divarapi.liara.run/product/all")
@@ -603,34 +601,27 @@ export default function homepage() {
               </div>
             </div>
           </div>
-          <div
-            className="flex flex-col items-end ps-[300px] pe-4 w-full h-screen mt-8 mb-14"
-            onLoad={() => setloader(true)}
-          >
+          <div className="flex flex-col items-end ps-[300px] pe-4 w-full h-screen mt-8 mb-14">
             <div className="text-xs IRANSansWeb text-[rgba(0,0,0,.56)] leading-[1.5rem] pb-2">
               دیوار تهران - نیازمندی‌ های رایگان، آگهی‌های خرید، فروش نو و دست
               دوم و کارکرده، استخدام و خدمات
             </div>
             {/* items */}
-            {loader ? (
-              <div className="flex flex-wrap justify-end gap-4 pt-2">
-                {/* a item */}
+            <div className="flex flex-wrap justify-end gap-4 pt-2">
+              {/* a item */}
 
-                {showproduct.length ? (
-                  [...showproduct]
-                    .reverse()
-                    .map((product) => (
-                      <Boxproduct key={product.id} {...product} />
-                    ))
-                ) : (
-                  <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
-                    آگهی مورد نظر یافت نشد
-                  </div>
-                )}
-              </div>
-            ) : (
-              <Loader />
-            )}
+              {showproduct.length ? (
+                [...showproduct]
+                  .reverse()
+                  .map((product) => (
+                    <Boxproduct key={product.id} {...product} />
+                  ))
+              ) : (
+                <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
+                  آگهی مورد نظر یافت نشد
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </section>
