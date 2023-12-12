@@ -3,6 +3,7 @@ import "./homepage.css";
 import Boxproduct from "../../componante/Boxproduct/Boxproduct";
 import logo from "../../../public/images/logo.svg";
 import { Link } from "react-router-dom";
+import Loader from "../../componante/loder/Loader";
 
 export default function homepage() {
   window.scroll(0, 0);
@@ -11,6 +12,7 @@ export default function homepage() {
   const [SearchValue, setSearchValue] = useState("");
   const [stuts, setstutus] = useState("");
   const [statusCity, setStatusCity] = useState("");
+  const [load, setload] = useState(false);
 
   useEffect(() => {
     fetch("https://divarapi.liara.run/product/all")
@@ -607,7 +609,11 @@ export default function homepage() {
               دوم و کارکرده، استخدام و خدمات
             </div>
             {/* items */}
-            <div className="flex flex-wrap justify-end gap-4 pt-2">
+            {!load && <Loader />}
+            <div
+              className="flex flex-wrap justify-end gap-4 pt-2"
+              onLoad={() => setload(true)}
+            >
               {/* a item */}
 
               {showproduct.length ? (
