@@ -13,12 +13,13 @@ export default function productpage() {
   useEffect(() => {
     fetch(`https://divarapi.liara.run/product/${shortname}`)
       .then((res) => res.json())
-      .then((data) => setmainproduct(data));
+      .then((data) => {
+        setmainproduct(data);
+        setload(true);
+      });
   }, []);
 
-  setTimeout(() => {
-    setload(true);
-  }, 3000);
+  setTimeout(() => {}, 3000);
 
   return (
     <>
