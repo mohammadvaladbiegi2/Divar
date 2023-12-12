@@ -19,8 +19,8 @@ export default function homepage() {
       .then((res) => res.json())
       .then((data) => {
         setallproduct(data);
-
         setshowproduct(data);
+        setload(true);
       });
   }, []);
 
@@ -137,10 +137,6 @@ export default function homepage() {
     setStatusCity("-1");
     setstutus("-1");
   }, [SearchValue]);
-
-  setTimeout(() => {
-    setload(true);
-  }, 4000);
 
   return (
     <div>
@@ -621,7 +617,7 @@ export default function homepage() {
                   [...showproduct]
                     .reverse()
                     .map((product) => (
-                      <Boxproduct key={product.id} {...product} />
+                      <Boxpr oduct key={product.id} {...product} />
                     ))
                 ) : (
                   <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
