@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import "./Boxproduct.css";
 import { Link } from "react-router-dom";
-import Loader from "../loder/Loader";
-
+import ImageLoader from "../imageLoader/imageLoader";
 export default function Boxproduct({
   title,
   price,
@@ -58,7 +57,7 @@ export default function Boxproduct({
             src={img}
             onLoad={() => setloader(true)}
           />
-          {!loader && <Loader />}
+          {!loader && <ImageLoader />}
         </div>
       </div>
     </Link>
