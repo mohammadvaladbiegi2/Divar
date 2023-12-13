@@ -53,7 +53,6 @@ export default function homepage() {
       }
     }
     setSearchValue("");
-    setstutus("-1");
   }, [statusCity]);
   useEffect(() => {
     switch (stuts) {
@@ -126,7 +125,6 @@ export default function homepage() {
       }
     }
     setSearchValue("");
-    setStatusCity("-1");
   }, [stuts]);
 
   useEffect(() => {
