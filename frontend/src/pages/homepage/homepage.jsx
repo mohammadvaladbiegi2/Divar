@@ -132,8 +132,8 @@ export default function homepage() {
       product.title.toLowerCase().includes(SearchValue)
     );
     setshowproduct(filterproduct);
-    setStatusCity("-1");
-    setstutus("-1");
+    setStatusCity("");
+    setstutus("");
   }, [SearchValue]);
 
   return (
@@ -154,6 +154,7 @@ export default function homepage() {
                   id="selectBox"
                   className="outline-none rounded px-2 IRANSansWeb_Medium text-sm cursor-pointer bg-transparent"
                   onChange={(e) => setStatusCity(e.target.value)}
+                  onClick={(e) => setStatusCity(e.target.value)}
                   defaultValue={statusCity}
                 >
                   <option value="-1">شهر ها</option>
@@ -165,6 +166,7 @@ export default function homepage() {
               <div className="flex-none flex h-10 rounded px-2 ms-4 hover:bg-[#0000000A] transition-all duration-300 items-center text-[rgba(0,0,0,.56)] hover:text-black cursor-pointer">
                 <select
                   onChange={(event) => setstutus(event.target.value)}
+                  onClick={(e) => setstutus(e.target.value)}
                   defaultValue={stuts}
                   className="outline-none rounded px-2 w-24 IRANSansWeb_Medium text-sm cursor-pointer bg-transparent"
                 >
