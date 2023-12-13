@@ -51,13 +51,8 @@ export default function Boxproduct({
             />
           </svg>
         </div>
-        <div className="flex-none w-[136px] h-[136px]">
-          <img
-            className="w-full h-full object-cover"
-            src={img}
-            onLoad={() => setloader(true)}
-          />
-          {!loader && <ImageLoader />}
+        <div className="flex-none w-[136px] h-[136px] card__placeholder">
+          <img className="w-full h-full object-cover" src={img} />
         </div>
       </div>
     </Link>
