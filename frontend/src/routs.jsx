@@ -1,6 +1,6 @@
 import React from "react";
 import Newproduct from "./pages/Newproduct/Newproduct";
-import Mainproductpage from "./pages/productpage/productpage";
+
 import Loader from "./componante/loder/Loader";
 const Lazyhopage = React.lazy(() => import("./pages/homepage/homepage"));
 const LazyMainproduct = React.lazy(() =>

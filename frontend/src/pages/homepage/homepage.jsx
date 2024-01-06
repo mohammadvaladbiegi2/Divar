@@ -617,7 +617,7 @@ export default function homepage() {
                   [...showproduct]
                     .reverse()
                     .map((product) => (
-                      <Boxproduct oduct key={product.id} {...product} />
+                      <Boxproduct key={product.id} {...product} />
                     ))
                 ) : (
                   <div className="w-[1000px] bg-[#be3737] text-white text-center p-4 rounded-lg IRANSansWeb">
